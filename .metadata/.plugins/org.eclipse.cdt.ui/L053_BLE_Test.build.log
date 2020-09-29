@@ -1,0 +1,20 @@
+18:05:20 **** Incremental Build of configuration Debug for project L053_BLE_Test ****
+make -j15 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER '-DBLUENRG_CONFIG=BLUENRG_32_MHZ' -DSTM32L053xx -DDEBUG -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -I../BlueNRG-MS/Target -I../Middlewares/ST/BlueNRG-MS/utils -I../Middlewares/ST/BlueNRG-MS/includes -I../Middlewares/ST/BlueNRG-MS/hci/hci_tl_patterns/Basic -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "L053_BLE_Test.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/Users/chrissutton/Projects/EmbeddedProjects/BLE_Tests/L053_BLE_Test/STM32L053R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="L053_BLE_Test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: L053_BLE_Test.elf
+ 
+arm-none-eabi-objdump -h -S  L053_BLE_Test.elf  > "L053_BLE_Test.list"
+arm-none-eabi-objcopy  -O binary  L053_BLE_Test.elf  "L053_BLE_Test.bin"
+arm-none-eabi-size   L053_BLE_Test.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16812	    120	   2752	  19684	   4ce4	L053_BLE_Test.elf
+Finished building: default.size.stdout
+ 
+Finished building: L053_BLE_Test.bin
+ 
+Finished building: L053_BLE_Test.list
+ 
+
+18:05:20 Build Finished. 0 errors, 0 warnings. (took 464ms)
+
