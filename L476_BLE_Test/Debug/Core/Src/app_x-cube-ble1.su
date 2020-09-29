@@ -1,0 +1,4 @@
+app_x-cube-ble1.c:26:6:MX_BlueNRG_MS_Init	48	static
+app_x-cube-ble1.c:57:6:MX_BlueNRG_MS_Process	8	static
+app_x-cube-ble1.c:67:6:receiveData	32	static
+app_x-cube-ble1.c:89:6:user_notify	32	static

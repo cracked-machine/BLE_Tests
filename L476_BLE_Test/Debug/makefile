@@ -51,8 +51,8 @@ L476_BLE_Test.bin \
 all: L476_BLE_Test.elf secondary-outputs
 
 # Tool invocations
-L476_BLE_Test.elf: $(OBJS) $(USER_OBJS) /Users/chrissutton/Projects/EmbeddedProjects/BLE_Tests/L476_BLE_Test/STM32L476RGTX_FLASH.ld
-	arm-none-eabi-gcc -o "L476_BLE_Test.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/Users/chrissutton/Projects/EmbeddedProjects/BLE_Tests/L476_BLE_Test/STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="L476_BLE_Test.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+L476_BLE_Test.elf: $(OBJS) $(USER_OBJS) /home/chris/Projects/Embedded/BLE_Tests/L476_BLE_Test/STM32L476RGTX_FLASH.ld
+	arm-none-eabi-gcc -o "L476_BLE_Test.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/chris/Projects/Embedded/BLE_Tests/L476_BLE_Test/STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="L476_BLE_Test.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
